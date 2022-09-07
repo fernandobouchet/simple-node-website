@@ -7,16 +7,16 @@ const server = http.createServer((req, res) => {
 
   if (path === '/') {
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end(fs.readFileSync('./pages/index.html'));
+    res.end(fs.readFileSync('./index.html'));
   } else if (path === '/about') {
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end(fs.readFileSync('./pages/about.html'));
+    res.end(fs.readFileSync('./about.html'));
   } else if (path === '/contact-me') {
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end(fs.readFileSync('./pages/contact-me.html'));
+    res.end(fs.readFileSync('./contact-me.html'));
   } else {
     res.writeHead(404, { 'Content-Type': 'text/html' });
-    res.end(fs.readFileSync('./pages/404.html'));
+    res.end(fs.readFileSync('./404.html'));
   }
 });
 
